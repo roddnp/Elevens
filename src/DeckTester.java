@@ -8,9 +8,9 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		String[] ranks = {"jack", "queen", "king"};
-		String[] suits = {"blue", "red"};
-		int[] pointValues = {11, 12, 13};
+		String[] ranks = {"jack", "queen", "king", "ace", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+		String[] suits = {"spades", "hearts", "diamonds", "clubs"};
+		int[] pointValues = {11, 12, 13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		Deck d = new Deck(ranks, suits, pointValues);
 
 		System.out.println("**** Original Deck Methods ****");
@@ -50,6 +50,8 @@ public class DeckTester {
 		System.out.println("  deal: " + d.deal());
 		System.out.println();
 		System.out.println();
+	
+		
 
 		/* *** TO BE COMPLETED IN ACTIVITY 4 *** */
 	}

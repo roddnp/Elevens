@@ -11,14 +11,14 @@ public class Deck {
 	/**
 	 * cards contains all the cards in the deck.
 	 */
-	private List<Card> cards;
+	private static List<Card> cards;
 
 	/**
 	 * size is the number of not-yet-dealt cards.
 	 * Cards are dealt from the top (highest index) down.
 	 * The next card to be dealt is at size - 1.
 	 */
-	private int size;
+	private static int size;
 
 
 	/**
@@ -61,8 +61,17 @@ public class Deck {
 	 * Randomly permute the given collection of cards
 	 * and reset the size to represent the entire deck.
 	 */
-	public void shuffle() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+	public static void shuffle() {
+		/* *** TO BE IMPLEMENTED IN ACTIVITY 3 *** */
+		
+		for(int k = size; k>0; k--){
+
+			int r = (int)(Math.random()*k+1);
+			Card temp = cards.get(k-1);
+			cards.set(k-1,cards.get(r-1));
+			cards.set(r-1,temp);
+		}
+		size = cards.size();
 	}
 
 	/**
